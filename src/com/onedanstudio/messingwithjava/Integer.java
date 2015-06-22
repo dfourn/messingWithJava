@@ -28,4 +28,13 @@ public class Integer {
         }
 
     }
+
+    public Object times(Returnable returnable) {
+        for (int i = 0; i<value; i++) {
+            returnable.run();
+        }
+
+        return returnable.ret();
+
+    }
 }

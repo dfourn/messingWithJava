@@ -9,13 +9,23 @@ public class Main {
 
         Integer number = new Integer(10);
 
-        number.times(new Runnable() {
+
+        String value = (String)number.times(new Returnable() {
+
+            String test = "";
+
             @Override
             public void run() {
-                System.out.println("Problem? :D");
+                test = test + "Problem?:D ";
+            }
+
+            @Override
+            public Object ret() {
+                return test;
             }
         });
 
 
+        System.out.println(value);
     }
 }
